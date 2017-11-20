@@ -1,0 +1,15 @@
+﻿@using Crud.Models;
+@{
+    ViewBag.Title = "Update";
+   
+}
+
+<h2>Update</h2>
+@using (Html.BeginForm("Update", "Home"))
+{
+
+    <input type="text" placeholder="Name" name="teachname" />
+    <input type="text" placeholder="Surname" name="teachSurname" />
+    <input type="submit" value="Update" />
+}
+@Html.ActionLink("Back to List", "Index")

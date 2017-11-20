@@ -1,0 +1,16 @@
+﻿@using Crud.Models;
+@{
+    ViewBag.Title = "Insert";
+  
+}
+
+<h2>Insert</h2>
+
+@using (Html.BeginForm("Insert", "Home"))
+{
+
+    <input type="text" placeholder="Name" name="teachName" />
+    <input type="text" placeholder="Surname" name="teachSurname" />
+    <input type="submit" value="Add New" />
+}
+@Html.ActionLink("Back to List", "Index")

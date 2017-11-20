@@ -1,0 +1,26 @@
+﻿@using Crud.Models;
+@{
+    ViewBag.Title = "Teachers";
+   
+}
+
+<h2>Index</h2>
+
+<table style="width:100%">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>SURNAME</th>
+    </tr>
+    @foreach (teacher item in ViewBag.teach)
+    {
+        <tr>
+            <td>@item.id</td>
+            <td>@item.teachName</td>
+            <td>@item.teachSurname</td> 
+            <td>@Html.ActionLink("Update", "Update", new { id =item.id }, null)</td>
+            <td>@Html.ActionLink("Delete", "Delete", new { id =item.id }, null)</td>
+        </tr>
+    }
+ @Html.ActionLink("Add", "Insert")
+</table>
